@@ -19,7 +19,8 @@ wood_rgba = [64, 114, 167, 255]
 def is_tree(spot, i):
     print(spot[i])
     similarity = np.corrcoef(spot[i], wood_rgba)[1][0]
-    return similarity >= 0.90
+    print(similarity)
+    return similarity >= 0.98
 
 class Bot:  
 
@@ -31,7 +32,7 @@ class Bot:
             self.move_right()
             time.sleep(0.03)
             self.move_right()
-            time.sleep(2.0)
+            time.sleep(0.5)
             self.play()
         except:
             button = pag.locateCenterOnScreen('replay.png')
@@ -40,7 +41,7 @@ class Bot:
             self.move_right()
             time.sleep(0.03)
             self.move_right()
-            time.sleep(2.0)
+            time.sleep(0.5)
             self.play()
 
     # how the bot moves:
@@ -72,23 +73,23 @@ class Bot:
 
             for i in range(num_branches):
                 if is_tree(tree, i):
-                    print('direita')
+                    #print('direita')
                     #self.move_right()
                     keyboard.press(Key.right)
                     keyboard.release(Key.right)
-                    time.sleep(0.1)
+                    time.sleep(0.025)
                     keyboard.press(Key.right)
                     keyboard.release(Key.right)
                 else:
-                    print('esquerda')
+                    #print('esquerda')
                     #self.move_left()
                     keyboard.press(Key.left)
                     keyboard.release(Key.left)
-                    time.sleep(0.1)
+                    time.sleep(0.025)
                     keyboard.press(Key.left)
                     keyboard.release(Key.left)
                     #self.move_left()
-            time.sleep(0.2)
+            time.sleep(0.25)
         
 
 if __name__ == '__main__':
