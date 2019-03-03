@@ -9,4 +9,5 @@ To stop it, you gotta do the dirty work: hit that CTRL-C/CTRL-Z on your Terminal
 If dies early, just keep rerunning until it works, the beginning of the phase is set in a weird way so I had to do some unusual things.
 
 Maxium score it got:
+
 ![Image](https://i.imgur.com/sT7GBFC.jpg)
