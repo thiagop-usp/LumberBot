@@ -14,7 +14,7 @@ branches_x = [164, 164, 164, 164, 164, 164]
 # from bottom to top in px
 branches_y = [367, 301, 234, 166, 100,  33]
 
-wood_rgba = [254, 247, 202, 255]
+wood_rgba = [64, 114, 167, 255]
 
 def is_tree(img_matrix, i):
     x_pos = branches_x[i]
@@ -39,14 +39,15 @@ class Bot:
     def move_right(self):
         keyboard.press(Key.right)
         keyboard.release(Key.right)
-        time.sleep(0.1)
+        time.sleep(0.15)
     def move_left(self):
         keyboard.press(Key.left)
         keyboard.release(Key.left)
-        time.sleep(0.1)
+        time.sleep(0.15)
 
     #the automation itself:
     def play(self):
+        time.sleep(0.15)
         screen = mss.mss()
         game = {
             'top': 130,
@@ -62,7 +63,9 @@ class Bot:
             for i in range(num_branches):
                 if(is_tree(img_matrix, i)):
                     self.move_right()
+                    self.move_right()
                 else:
+                    self.move_left()
                     self.move_left()
         
 
