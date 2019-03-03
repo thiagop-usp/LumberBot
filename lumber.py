@@ -10,16 +10,17 @@ keyboard = Controller()
 
 num_branches = 6
 # from left to right in px
-branches_x = [164, 164, 164, 164, 164, 164]
-# from bottom to top in px
-branches_y = [367, 301, 234, 166, 100,  33]
+branches_x = [181, 181, 181, 181, 181, 181]
+# from top to bottom in px
+branches_y = [400, 335, 270, 205, 134, 67]
 
-wood_rgba = [64, 114, 167, 255]
+wood_rgba = [64, 114, 167, 255] 
 
 def is_tree(img_matrix, i):
     x_pos = branches_x[i]
     y_pos = branches_y[i]
-    return np.array_equal(img_matrix[y_pos][x_pos], wood_rgba)
+    spot = img_matrix[y_pos][x_pos]
+    return spot[0] == wood_rgba[0] and spot[1] == wood_rgba[1] and spot[2] == wood_rgba[2]
 
 class Bot:  
 
@@ -39,15 +40,15 @@ class Bot:
     def move_right(self):
         keyboard.press(Key.right)
         keyboard.release(Key.right)
-        time.sleep(0.15)
+        time.sleep(0.016)
     def move_left(self):
         keyboard.press(Key.left)
         keyboard.release(Key.left)
-        time.sleep(0.15)
+        time.sleep(0.016)
 
     #the automation itself:
     def play(self):
-        time.sleep(0.15)
+        time.sleep(0.1)
         screen = mss.mss()
         game = {
             'top': 130,
