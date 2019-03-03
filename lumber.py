@@ -18,7 +18,8 @@ wood_rgba = [64, 114, 167, 255]
 
 def is_tree(spot, i):
     print(spot[i])
-    return np.all(spot[i] == wood_rgba)
+    similarity = np.corrcoef(spot[i], wood_rgba)[1][0]
+    return similarity >= 0.90
 
 class Bot:  
 
@@ -28,6 +29,7 @@ class Bot:
             pag.moveTo(button)
             pag.click()
             self.move_right()
+            time.sleep(0.03)
             self.move_right()
             time.sleep(2.0)
             self.play()
@@ -36,6 +38,7 @@ class Bot:
             pag.moveTo(button)
             pag.click()
             self.move_right()
+            time.sleep(0.03)
             self.move_right()
             time.sleep(2.0)
             self.play()
@@ -58,8 +61,8 @@ class Bot:
             'height': 636
         }
         
+        screen = mss.mss()
         while True:
-            screen = mss.mss()
             img = screen.grab(game)
             img_matrix = np.array(img)
 
@@ -69,17 +72,23 @@ class Bot:
 
             for i in range(num_branches):
                 if is_tree(tree, i):
-                    self.move_right()
-                    time.sleep(0.03)
-                    self.move_right()
-                    time.sleep(0.03)
+                    print('direita')
+                    #self.move_right()
+                    keyboard.press(Key.right)
+                    keyboard.release(Key.right)
+                    time.sleep(0.1)
+                    keyboard.press(Key.right)
+                    keyboard.release(Key.right)
                 else:
-                    self.move_left()
-                    time.sleep(0.03)
-                    self.move_left()
-                    time.sleep(0.03)
-            time.sleep(1.5)
-
+                    print('esquerda')
+                    #self.move_left()
+                    keyboard.press(Key.left)
+                    keyboard.release(Key.left)
+                    time.sleep(0.1)
+                    keyboard.press(Key.left)
+                    keyboard.release(Key.left)
+                    #self.move_left()
+            time.sleep(0.2)
         
 
 if __name__ == '__main__':
