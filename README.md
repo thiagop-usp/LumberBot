@@ -15,6 +15,8 @@ You can also kill the lumberjack if you'd like, by pressing any key (though that
 If the Lumberjack dies early, just keep replaying the game or rerunning the program until it works (you'll notice when it goes full Rambo mode).
 The beginning of the level is set in a weird way (doesn't match the algorithm standard) so I had to do some unusual things.
 
+This project was done in like, a few hours, and my goal was only to learn something new and have fun. So if it's not so good I apologize, you're free to fork and make it something decent if you want.
+
 ### How it works:
 - Some things are pre-determined:
   - The game will only always have 6 branches in the screen (except for the beginning, it starts up with 5, but you just gotta    move twice and it'll go back to 6.
