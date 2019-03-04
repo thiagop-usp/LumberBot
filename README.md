@@ -26,6 +26,13 @@ The beginning of the level is set in a weird way (doesn't match the algorithm st
   - Move twice to the opposite side of a branch to destroy it (that's the concept of the game I guess, huh)
   - GG.
 
+### Requirements:
+- I used the following modules and libraries:
+	- MSS
+	- Pynput
+	- PyAutoGui
+	- Numpy
+
 ### Maximum score it got:
 
 ![Image](https://i.imgur.com/sT7GBFC.jpg)
