@@ -30,6 +30,6 @@ The beginning of the phase is set in a weird way (doesn't match the algorithm st
 ![Image](https://i.imgur.com/sT7GBFC.jpg)
 
 ### TODO:
-  ##### Efficiency improvements.
-  ####  Make code cleaner (this is a must haha, it got really ugly as things weren't working and I had to chang it up.
-  ##### Make it more precise (a good way would be matching more pixels in different positions).
+  ###### Efficiency improvements.
+  ######  Make code cleaner (this is a must haha, it got really ugly as things weren't working and I had to chang it up.
+  ###### Make it more precise (a good way would be matching more pixels in different positions).
