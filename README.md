@@ -11,7 +11,7 @@ For now slowing it down and using correlation matching in `Numpy` did the job (s
 To stop it, you gotta do the dirty work: hit that CTRL-C/CTRL-Z on your Terminal
 (The fail safe is a **TODO**)
 
-If the Lumberjack dies early, just keep rerunning the program until it works (you'll notice when it goes full Rambo mode).
+If the Lumberjack dies early, just keep replaying the game or rerunning the program until it works (you'll notice when it goes full Rambo mode).
 The beginning of the level is set in a weird way (doesn't match the algorithm standard) so I had to do some unusual things.
 
 ### How it works:
