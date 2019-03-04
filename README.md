@@ -8,7 +8,8 @@ It's a bit slow'd down by `time.sleep(..)` calls because the quicker it goes, th
 I'll work on it later and figure out a better way of comparing the pixels so that it doesn't do the wrong movements. 
 For now slowing it down and using correlation matching in `Numpy` did the job (sometimes there's a >0.01% difference between pixels, but essentially they are the same in that context: a branch).
 
-To stop it, you gotta do the dirty work: hit that CTRL-C/CTRL-Z on your Terminal
+To stop it, you gotta do the dirty work: hit that CTRL-C/CTRL-Z on your Terminal.
+You can also kill the lumberjack if you'd like, by pressing any key (though that's really cruel).
 (The fail safe is a **TODO**)
 
 If the Lumberjack dies early, just keep replaying the game or rerunning the program until it works (you'll notice when it goes full Rambo mode).
