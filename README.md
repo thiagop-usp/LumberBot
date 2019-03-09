@@ -35,6 +35,11 @@ This project was done in like, a few hours, and my goal was only to learn someth
 	- Pynput
 	- PyAutoGui
 	- Numpy
+- To install these dependencies run:
+	
+	```shell
+	pip3 install -r requirements.txt
+	```
 
 ### Maximum score it got:
 
